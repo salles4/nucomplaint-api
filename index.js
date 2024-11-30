@@ -11,7 +11,7 @@ app.listen(8000, () => {
   console.log('Server running at http://localhost:8000');
   
 })
-app.get("/api/complaint_report", (req, res) => {
+app.post("/api/complaint_report", (req, res) => {
   const complaintData = req.body.complaintData;
   if(!complaintData){
     res.status(400).json({error: "Missing body"})
