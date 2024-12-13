@@ -32,7 +32,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-8b" });
 async function generate(complaintData){
-  const context = "This is a web-based complaint management system of an university. Provide short suggestions how to address the most reported complaint type in a school environment, suggest only if the amount is above 10. "
+  const context = "This is a web-based complaint management system of an university. Provide short suggestions how to address the most reported complaint type in a school environment, suggest only if the amount is above 5. "
   
   const sampledata = "Theft:2, Academic Dishonesty:8, Improper dresscode:21, Loitering:1, Fighting:1.";
   
