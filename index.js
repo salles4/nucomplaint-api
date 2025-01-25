@@ -13,7 +13,7 @@ app.listen(8000, () => {
 })
 
 app.post("/api/complaint_report", (req, res) => {
-  const complaintData = req.body.complaintData;
+  const complaintData = req.body.dataContext;
   if (!complaintData) {
     res.status(400).json({ error: "Missing body" })
     return;
@@ -25,7 +25,7 @@ app.post("/api/complaint_report", (req, res) => {
   }).catch(error => showError(error, res))
 })
 app.post("/api/offense_report", (req, res) => {
-  const offenseData = req.body.offenseData;
+  const offenseData = req.body.dataContext;
   if (!offenseData) {
     res.status(400).json({ error: "Missing body" })
     return;
